@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faith on Fire 🕊 - Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="script.js" defer></script>
+  <script>tailwind.config = { darkMode: 'class' }</script>
+</head>
+<body class="bg-stone-50 dark:bg-stone-950 font-sans text-gray-900 dark:text-gray-100">
+  <header class="bg-white dark:bg-stone-800 shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="spirit.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600">Spirit of Truth</a>
+        <a href="index.html" class="text-2xl font-bold text-orange-600 dark:text-orange-400 flex items-center gap-2"><span class="text-3xl">🕊</span> Faith on Fire</a>
+      <div class="hidden md:flex space-x-6 items-center">
+        <a href="spirit.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600">Spirit of Truth</a>
+        <a href="index.html" class="text-gray-600 dark:text-gray-300">Home</a>
+        <a href="products.html" class="text-gray-600 dark:text-gray-300">Products</a>
+        <a href="blog.html" class="text-gray-600 dark:text-gray-300">Devotionals</a>
+        <a href="profile.html" class="text-orange-600 dark:text-orange-400 font-semibold border-b-2 border-orange-600 pb-1">Profile</a>
+        <a href="cart.html" class="text-gray-600 dark:text-gray-300">Cart</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <input id="search-input" type="text" placeholder="Search..." class="hidden sm:block w-40 px-3 py-1.5 border rounded-lg dark:bg-stone-700 dark:border-gray-600 text-sm">
+        <button class="dark-toggle p-2 rounded-lg"><i class="fas fa-moon dark-icon"></i></button>
+        <a href="cart.html" class="relative"><i class="fas fa-shopping-cart text-xl"></i><span class="cart-count absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" style="display:none;">0</span></a>
+        <button onclick="openAuthModal('login')" class="login-btn bg-orange-600 text-white px-4 py-2 rounded-lg text-sm">Login</button>
+        <div class="user-menu hidden"><span class="user-name"></span> <button onclick="logout()" class="ml-2 text-sm">Logout</button></div>
+        <button id="mobile-menu-btn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-stone-800 border-t px-4 py-3 space-y-3">
+      <a href="spirit.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600">Spirit of Truth</a>
+        <a href="index.html" class="block">Home</a><a href="products.html" class="block">Products</a><a href="blog.html" class="block">Devotionals</a><a href="profile.html" class="block font-semibold">Profile</a><a href="cart.html" class="block">Cart</a>
+    </div>
+  </header>
+
+  <div id="auth-modal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+    <div class="bg-white dark:bg-stone-800 rounded-xl p-6 w-full max-w-md mx-4">
+      <h2 id="auth-title" class="text-2xl font-bold mb-4">Log In</h2>
+      <form onsubmit="handleAuth(event)">
+        <input id="auth-name" placeholder="Name" class="w-full mb-3 px-4 py-2 border rounded-lg dark:bg-stone-700">
+        <input id="auth-email" type="email" placeholder="Email" required class="w-full mb-3 px-4 py-2 border rounded-lg dark:bg-stone-700">
+        <input id="auth-password" type="password" placeholder="Password" required class="w-full mb-4 px-4 py-2 border rounded-lg dark:bg-stone-700">
+        <button id="auth-submit" type="submit" class="w-full bg-orange-600 text-white py-2 rounded-lg">Log In</button>
+      </form>
+      <button id="auth-switch" class="mt-4 text-orange-600 text-sm">Sign up</button>
+      <button onclick="closeAuthModal()" class="mt-2 text-sm">Cancel</button>
+    </div>
+  </div>
+
+  <main class="container mx-auto px-4 py-8 max-w-4xl">
+    <div class="bg-white dark:bg-stone-800 rounded-2xl shadow-lg overflow-hidden mb-8">
+      <div class="h-32 bg-gradient-to-r from-indigo-500 to-purple-600"></div>
+      <div class="px-6 pb-6">
+        <div class="flex flex-col sm:flex-row items-center sm:items-end gap-6 -mt-16">
+          <img src="https://i.pravatar.cc/150?img=32" alt="Profile" class="w-32 h-32 rounded-full border-4 border-white dark:border-gray-800 shadow-lg">
+          <div class="text-center sm:text-left flex-1">
+            <h1 class="text-3xl font-bold">Jordan Lee</h1>
+            <p class="text-gray-500">@jordanlee</p>
+            <p id="bio" class="mt-2 text-gray-700 dark:text-gray-300 max-w-xl">Sharing faith, community, and daily inspiration. Love coffee and good books.</p>
+          </div>
+          <button id="edit-profile-btn" onclick="saveProfile()" class="hidden bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 mt-4 sm:mt-0">Save Changes</button>
+        </div>
+        <div class="flex justify-center sm:justify-start gap-8 mt-6 pt-6 border-t dark:border-gray-700">
+          <div class="text-center"><div class="text-2xl font-bold">56</div><div class="text-sm text-gray-500">Posts</div></div>
+          <div class="text-center"><div class="text-2xl font-bold">1,247</div><div class="text-sm text-gray-500">Followers</div></div>
+          <div class="text-center"><div class="text-2xl font-bold">389</div><div class="text-sm text-gray-500">Following</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-b mb-6 dark:border-gray-700">
+      <div class="flex gap-8">
+        <button class="pb-3 border-b-2 border-orange-600 font-semibold text-orange-600">Posts</button>
+        <button class="pb-3 text-gray-500">Devotionals</button>
+        <button class="pb-3 text-gray-500">Liked</button>
+      </div>
+    </div>
+
+    <div class="space-y-6">
+      <article data-searchable class="bg-white dark:bg-stone-800 rounded-xl shadow p-5">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="https://i.pravatar.cc/150?img=32" class="w-10 h-10 rounded-full">
+          <div><h3 class="font-semibold">Jordan Lee</h3><p class="text-xs text-gray-500">Yesterday</p></div>
+        </div>
+        <p class="mb-3">Just finished reading through the weekly challenge on kindness. Who's joining me this week?</p>
+        <div class="flex gap-6 text-gray-500 text-sm">
+          <button onclick="toggleLike(this)" class="flex items-center gap-1 text-red-500"><i class="fas fa-heart"></i> 67</button>
+          <button class="flex items-center gap-1"><i class="far fa-comment"></i> 14</button>
+          <button class="flex items-center gap-1"><i class="far fa-share-square"></i> Share</button>
+        </div>
+      </article>
+      <article data-searchable class="bg-white dark:bg-stone-800 rounded-xl shadow p-5">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="https://i.pravatar.cc/150?img=32" class="w-10 h-10 rounded-full">
+          <div><h3 class="font-semibold">Jordan Lee</h3><p class="text-xs text-gray-500">3 days ago</p></div>
+        </div>
+        <p class="mb-3">My favorite morning ritual: coffee + the Daily Devotional Journal. Starting the day grounded. ☕📖</p>
+        <img src="https://picsum.photos/600/300?random=30" class="rounded-lg w-full h-48 object-cover mb-3">
+        <div class="flex gap-6 text-gray-500 text-sm">
+          <button onclick="toggleLike(this)" class="flex items-center gap-1"><i class="far fa-heart"></i> 45</button>
+          <button class="flex items-center gap-1"><i class="far fa-comment"></i> 8</button>
+          <button class="flex items-center gap-1"><i class="far fa-share-square"></i> Share</button>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="bg-white dark:bg-stone-800 border-t mt-12 py-6 text-center text-gray-500 text-sm"><p>&copy; 2026 Faith on Fire 🕊.</p></footer>
+</body>
+</html>
