@@ -183,3 +183,20 @@ function updateAuthUI() {
     userMenus.forEach(m => m.classList.add('hidden'));
   }
 }
+// Winter snowfall
+document.addEventListener('DOMContentLoaded', () => {
+  const layer = document.createElement('div');
+  layer.id = 'snow-layer';
+  for (let i = 0; i < 30; i++) {
+    const f = document.createElement('span');
+    f.className = 'snowflake';
+    f.textContent = '❄';
+    f.style.left = Math.random() * 100 + '%';
+    f.style.fontSize = 10 + Math.random() * 14 + 'px';
+    f.style.opacity = 0.5 + Math.random() * 0.5;
+    f.style.animationDuration = 8 + Math.random() * 10 + 's';
+    f.style.animationDelay = -Math.random() * 15 + 's';
+    layer.appendChild(f);
+  }
+  document.body.appendChild(layer);
+});

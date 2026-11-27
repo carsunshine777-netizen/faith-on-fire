@@ -6,35 +6,36 @@
   <title>Faith on Fire 🕊 - Home</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="winter.css">
   <script src="script.js" defer></script>
   <script>tailwind.config = { darkMode: 'class' }</script>
 </head>
-<body class="bg-stone-50 dark:bg-stone-950 font-sans text-stone-900 dark:text-stone-100">
+<body class="bg-sky-50 dark:bg-stone-950 font-sans text-stone-900 dark:text-stone-100">
   <!-- Header -->
   <header class="bg-white/90 dark:bg-stone-900/90 backdrop-blur shadow-md sticky top-0 z-50">
     <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
       <a href="index.html" class="flex items-center gap-2">
         <img src="logo.jpg" alt="Faith on Fire" class="h-10 w-auto">
-        <span class="text-xl font-bold text-orange-600 dark:text-orange-400 hidden sm:inline">Faith on Fire</span>
+        <span class="text-xl font-bold text-red-600 dark:text-red-400 hidden sm:inline">Faith on Fire</span>
       </a>
       <div class="hidden md:flex space-x-6 items-center">
-        <a href="index.html" class="text-orange-600 dark:text-orange-400 font-semibold border-b-2 border-orange-600 pb-1">Home</a>
-        <a href="spirit.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600">Spirit of Truth</a>
-        <a href="products.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600">Products</a>
-        <a href="blog.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600">Devotionals</a>
-        <a href="profile.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600">Profile</a>
-        <a href="cart.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600">Cart</a>
+        <a href="index.html" class="text-red-600 dark:text-red-400 font-semibold border-b-2 border-red-600 pb-1">Home</a>
+        <a href="spirit.html" class="text-stone-600 dark:text-stone-300 hover:text-red-600">Spirit of Truth</a>
+        <a href="products.html" class="text-stone-600 dark:text-stone-300 hover:text-red-600">Products</a>
+        <a href="blog.html" class="text-stone-600 dark:text-stone-300 hover:text-red-600">Devotionals</a>
+        <a href="profile.html" class="text-stone-600 dark:text-stone-300 hover:text-red-600">Profile</a>
+        <a href="cart.html" class="text-stone-600 dark:text-stone-300 hover:text-red-600">Cart</a>
       </div>
       <div class="flex items-center gap-3">
         <input id="search-input" type="text" placeholder="Search..." class="hidden sm:block w-40 px-3 py-1.5 border rounded-lg dark:bg-stone-800 dark:border-stone-700 text-sm">
         <button class="dark-toggle p-2 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800">
           <i class="fas fa-moon dark-icon"></i>
         </button>
-        <a href="cart.html" class="relative text-stone-600 dark:text-stone-300 hover:text-orange-600">
+        <a href="cart.html" class="relative text-stone-600 dark:text-stone-300 hover:text-red-600">
           <i class="fas fa-shopping-cart text-xl"></i>
           <span class="cart-count absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" style="display:none;">0</span>
         </a>
-        <button onclick="openAuthModal('login')" class="login-btn bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 text-sm">Login</button>
+        <button onclick="openAuthModal('login')" class="login-btn bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 text-sm">Login</button>
         <div class="user-menu hidden relative">
           <button class="flex items-center gap-2">
             <img src="https://i.pravatar.cc/150?img=32" class="w-8 h-8 rounded-full">
@@ -61,20 +62,20 @@
         <input id="auth-name" type="text" placeholder="Full Name" class="w-full mb-3 px-4 py-2 border rounded-lg dark:bg-stone-700">
         <input id="auth-email" type="email" placeholder="Email" required class="w-full mb-3 px-4 py-2 border rounded-lg dark:bg-stone-700">
         <input id="auth-password" type="password" placeholder="Password" required class="w-full mb-4 px-4 py-2 border rounded-lg dark:bg-stone-700">
-        <button id="auth-submit" type="submit" class="w-full bg-orange-600 text-white py-2 rounded-lg hover:bg-orange-700">Log In</button>
+        <button id="auth-submit" type="submit" class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700">Log In</button>
       </form>
-      <button id="auth-switch" class="mt-4 text-orange-600 text-sm">Don't have an account? Sign up</button>
+      <button id="auth-switch" class="mt-4 text-red-600 text-sm">Don't have an account? Sign up</button>
       <button onclick="closeAuthModal()" class="mt-2 text-stone-500 text-sm">Cancel</button>
     </div>
   </div>
 
   <!-- HERO -->
-  <section class="relative bg-gradient-to-br from-orange-600 via-red-600 to-amber-700 text-white overflow-hidden">
+  <section class="relative bg-gradient-to-br from-red-600 via-red-700 to-green-800 text-white overflow-hidden">
     <div class="absolute inset-0 opacity-20 bg-[url('https://picsum.photos/1600/800?random=50')] bg-cover bg-center"></div>
     <div class="relative container mx-auto px-4 py-24 md:py-32 text-center">
       <p class="text-amber-200 font-medium tracking-widest uppercase text-sm mb-4">Ignited by the Spirit</p>
       <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Faith on Fire 🕊</h1>
-      <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8 text-orange-100">A community of believers who burn brightly with the light of the Trinity and His Word to defy darkness and those who are lost or broken.</p>
+      <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8 text-red-100">A community of believers who burn brightly with the light of the Trinity and His Word to defy darkness and those who are lost or broken.</p>
       
       <blockquote class="bg-black/30 backdrop-blur rounded-2xl p-6 md:p-8 max-w-3xl mx-auto mb-10 border border-white/20">
         <p class="text-lg md:text-xl italic leading-relaxed">
@@ -84,7 +85,7 @@
       </blockquote>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="blog.html" class="bg-white text-orange-700 px-8 py-3 rounded-full font-semibold hover:bg-amber-100 transition">Today’s Devotional</a>
+        <a href="blog.html" class="bg-white text-red-700 px-8 py-3 rounded-full font-semibold hover:bg-amber-100 transition">Today’s Devotional</a>
         <button onclick="openAuthModal('signup')" class="bg-amber-400 text-stone-900 px-8 py-3 rounded-full font-semibold hover:bg-amber-300 transition">Join the Fire</button>
       </div>
     </div>
@@ -92,18 +93,18 @@
 
   <!-- Today's Devotional -->
   <section class="container mx-auto px-4 pt-12 max-w-2xl">
-    <div class="bg-gradient-to-r from-orange-600 to-purple-600 rounded-2xl text-white p-8">
+    <div class="bg-gradient-to-r from-red-600 to-green-600 rounded-2xl text-white p-8">
       <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Today’s Devotional</span>
       <h2 class="text-3xl font-bold mt-4 mb-3">WHERE IS HE THAT IS BORN KING OF THE JEWS?</h2>
       <p class="font-semibold italic mb-4">“Now when Jesus was born in Bethlehem of Judaea in the days of Herod the king, behold, there came wise men from the east to Jerusalem, Saying, Where is he that is born King of the Jews? for we have seen his star in the east, and are come to worship him.” — Matthew 2:1-2 (KJV)</p>
       <h3 class="font-bold mt-4 mb-1">Devotional</h3>
-      <p class="text-orange-100 leading-relaxed mb-4">The Magi did not have all the answers, but they had enough light to begin the journey. Seeking is itself an act of wisdom and faith. They left comfort, crossed borders, and asked hard questions. December invites the same posture: we do not need to see the whole path—only the next step of light.</p>
+      <p class="text-red-100 leading-relaxed mb-4">The Magi did not have all the answers, but they had enough light to begin the journey. Seeking is itself an act of wisdom and faith. They left comfort, crossed borders, and asked hard questions. December invites the same posture: we do not need to see the whole path—only the next step of light.</p>
       <h3 class="font-bold mt-4 mb-1">Quote</h3>
-      <p class="text-orange-100 italic mb-4">“Wise men still seek Him.” — Traditional Christmas saying</p>
+      <p class="text-red-100 italic mb-4">“Wise men still seek Him.” — Traditional Christmas saying</p>
       <h3 class="font-bold mt-4 mb-1">Christmas Song Verse</h3>
-      <p class="text-orange-100 italic mb-4">“We three kings of Orient are;<br>Bearing gifts we traverse afar,<br>Field and fountain, moor and mountain,<br>Following yonder star.”<br>— We Three Kings</p>
+      <p class="text-red-100 italic mb-4">“We three kings of Orient are;<br>Bearing gifts we traverse afar,<br>Field and fountain, moor and mountain,<br>Following yonder star.”<br>— We Three Kings</p>
       <h3 class="font-bold mt-4 mb-1">Today’s Thought</h3>
-      <p class="text-orange-100 leading-relaxed">Begin a simple “seeking journal.” Write one honest question you have for God this month that will bring more peace and joy to this month ...to this year?</p>
+      <p class="text-red-100 leading-relaxed">Begin a simple “seeking journal.” Write one honest question you have for God this month that will bring more peace and joy to this month ...to this year?</p>
     </div>
   </section>
 
@@ -117,10 +118,10 @@
     <div class="bg-white dark:bg-stone-800 rounded-xl shadow p-4 mb-6">
       <div class="flex gap-3">
         <img src="https://i.pravatar.cc/150?img=32" alt="You" class="w-10 h-10 rounded-full">
-        <input type="text" placeholder="Share a thought or testimony..." class="flex-1 border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400 dark:bg-stone-700 dark:border-stone-600">
+        <input type="text" placeholder="Share a thought or testimony..." class="flex-1 border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400 dark:bg-stone-700 dark:border-stone-600">
       </div>
       <div class="flex justify-end mt-3">
-        <button class="bg-orange-600 text-white px-4 py-1.5 rounded-lg text-sm hover:bg-orange-700">Post</button>
+        <button class="bg-red-600 text-white px-4 py-1.5 rounded-lg text-sm hover:bg-red-700">Post</button>
       </div>
     </div>
 
@@ -134,8 +135,8 @@
         <img src="https://picsum.photos/600/300?random=1" class="rounded-lg w-full h-48 object-cover mb-3">
         <div class="flex gap-6 text-stone-500 text-sm">
           <button onclick="toggleLike(this)" class="flex items-center gap-1 hover:text-red-500"><i class="far fa-heart"></i> 24</button>
-          <button class="flex items-center gap-1 hover:text-orange-600"><i class="far fa-comment"></i> 5</button>
-          <button class="flex items-center gap-1 hover:text-orange-600"><i class="far fa-share-square"></i> Share</button>
+          <button class="flex items-center gap-1 hover:text-red-600"><i class="far fa-comment"></i> 5</button>
+          <button class="flex items-center gap-1 hover:text-red-600"><i class="far fa-share-square"></i> Share</button>
         </div>
       </article>
 
@@ -147,8 +148,8 @@
         <p class="mb-3">Just finished the new devotional journal I got from the shop. Highly recommend! Perfect for morning reflections.</p>
         <div class="flex gap-6 text-stone-500 text-sm">
           <button onclick="toggleLike(this)" class="flex items-center gap-1 hover:text-red-500"><i class="far fa-heart"></i> 18</button>
-          <button class="flex items-center gap-1 hover:text-orange-600"><i class="far fa-comment"></i> 3</button>
-          <button class="flex items-center gap-1 hover:text-orange-600"><i class="far fa-share-square"></i> Share</button>
+          <button class="flex items-center gap-1 hover:text-red-600"><i class="far fa-comment"></i> 3</button>
+          <button class="flex items-center gap-1 hover:text-red-600"><i class="far fa-share-square"></i> Share</button>
         </div>
       </article>
 
@@ -161,15 +162,15 @@
         <img src="https://picsum.photos/600/300?random=2" class="rounded-lg w-full h-48 object-cover mb-3">
         <div class="flex gap-6 text-stone-500 text-sm">
           <button onclick="toggleLike(this)" class="flex items-center gap-1 hover:text-red-500"><i class="far fa-heart"></i> 42</button>
-          <button class="flex items-center gap-1 hover:text-orange-600"><i class="far fa-comment"></i> 12</button>
-          <button class="flex items-center gap-1 hover:text-orange-600"><i class="far fa-share-square"></i> Share</button>
+          <button class="flex items-center gap-1 hover:text-red-600"><i class="far fa-comment"></i> 12</button>
+          <button class="flex items-center gap-1 hover:text-red-600"><i class="far fa-share-square"></i> Share</button>
         </div>
       </article>
     </div>
   </main>
 
   <footer class="bg-stone-900 text-stone-400 border-t border-stone-800 mt-12 py-8 text-center text-sm">
-    <p class="text-lg font-semibold text-orange-400 mb-2">Faith on Fire 🕊</p>
+    <p class="text-lg font-semibold text-red-400 mb-2">Faith on Fire 🕊</p>
     <p>Ignited by the Spirit • John 14:16-17</p>
     <p class="mt-2">&copy; 2026 Faith on Fire. All rights reserved.</p>
   </footer>

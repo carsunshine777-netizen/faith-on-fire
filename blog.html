@@ -6,19 +6,20 @@
   <title>Faith on Fire 🕊 - Devotionals</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="winter.css">
   <script src="script.js" defer></script>
   <script>tailwind.config = { darkMode: 'class' }</script>
 </head>
-<body class="bg-stone-50 dark:bg-stone-950 font-sans text-gray-900 dark:text-gray-100">
+<body class="bg-sky-50 dark:bg-stone-950 font-sans text-gray-900 dark:text-gray-100">
   <header class="bg-white dark:bg-stone-800 shadow-md sticky top-0 z-50">
     <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <a href="spirit.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600">Spirit of Truth</a>
-        <a href="index.html" class="text-2xl font-bold text-orange-600 dark:text-orange-400 flex items-center gap-2"><span class="text-3xl">🕊</span> Faith on Fire</a>
+      <a href="spirit.html" class="text-stone-600 dark:text-stone-300 hover:text-red-600">Spirit of Truth</a>
+        <a href="index.html" class="text-2xl font-bold text-red-600 dark:text-red-400 flex items-center gap-2"><span class="text-3xl">🕊</span> Faith on Fire</a>
       <div class="hidden md:flex space-x-6 items-center">
-        <a href="spirit.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600">Spirit of Truth</a>
+        <a href="spirit.html" class="text-stone-600 dark:text-stone-300 hover:text-red-600">Spirit of Truth</a>
         <a href="index.html" class="text-gray-600 dark:text-gray-300">Home</a>
         <a href="products.html" class="text-gray-600 dark:text-gray-300">Products</a>
-        <a href="blog.html" class="text-orange-600 dark:text-orange-400 font-semibold border-b-2 border-orange-600 pb-1">Devotionals</a>
+        <a href="blog.html" class="text-red-600 dark:text-red-400 font-semibold border-b-2 border-red-600 pb-1">Devotionals</a>
         <a href="profile.html" class="text-gray-600 dark:text-gray-300">Profile</a>
         <a href="cart.html" class="text-gray-600 dark:text-gray-300">Cart</a>
       </div>
@@ -26,13 +27,13 @@
         <input id="search-input" type="text" placeholder="Search devotionals..." class="hidden sm:block w-40 px-3 py-1.5 border rounded-lg dark:bg-stone-700 dark:border-gray-600 text-sm">
         <button class="dark-toggle p-2 rounded-lg"><i class="fas fa-moon dark-icon"></i></button>
         <a href="cart.html" class="relative"><i class="fas fa-shopping-cart text-xl"></i><span class="cart-count absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" style="display:none;">0</span></a>
-        <button onclick="openAuthModal('login')" class="login-btn bg-orange-600 text-white px-4 py-2 rounded-lg text-sm">Login</button>
+        <button onclick="openAuthModal('login')" class="login-btn bg-red-600 text-white px-4 py-2 rounded-lg text-sm">Login</button>
         <div class="user-menu hidden"><span class="user-name"></span> <button onclick="logout()">Logout</button></div>
         <button id="mobile-menu-btn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
       </div>
     </nav>
     <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-stone-800 border-t px-4 py-3 space-y-3">
-      <a href="spirit.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600">Spirit of Truth</a>
+      <a href="spirit.html" class="text-stone-600 dark:text-stone-300 hover:text-red-600">Spirit of Truth</a>
         <a href="index.html" class="block">Home</a><a href="products.html" class="block">Products</a><a href="blog.html" class="block font-semibold">Devotionals</a><a href="profile.html" class="block">Profile</a><a href="cart.html" class="block">Cart</a>
     </div>
   </header>
@@ -44,31 +45,31 @@
         <input id="auth-name" placeholder="Name" class="w-full mb-3 px-4 py-2 border rounded-lg dark:bg-stone-700">
         <input id="auth-email" type="email" placeholder="Email" required class="w-full mb-3 px-4 py-2 border rounded-lg dark:bg-stone-700">
         <input id="auth-password" type="password" placeholder="Password" required class="w-full mb-4 px-4 py-2 border rounded-lg dark:bg-stone-700">
-        <button id="auth-submit" type="submit" class="w-full bg-orange-600 text-white py-2 rounded-lg">Log In</button>
+        <button id="auth-submit" type="submit" class="w-full bg-red-600 text-white py-2 rounded-lg">Log In</button>
       </form>
-      <button id="auth-switch" class="mt-4 text-orange-600 text-sm">Sign up instead</button>
+      <button id="auth-switch" class="mt-4 text-red-600 text-sm">Sign up instead</button>
       <button onclick="closeAuthModal()" class="mt-2 text-sm text-gray-500">Cancel</button>
     </div>
   </div>
 
   <main class="container mx-auto px-4 py-8">
     <div class="mb-8 text-center">
-      <h1 class="text-4xl font-bold mb-2">Daily Devotionals</h1>
-      <p class="text-gray-600 dark:text-gray-400">Find inspiration and strength through daily reflections.</p>
+      <h1 class="text-4xl font-bold mb-2">Daily Devotionals: Making Room for Jesus</h1>
+      <p class="text-gray-600 dark:text-gray-400">Make room in your heart and your home this Christmas season for the One who came for us all.</p>
     </div>
 
-    <div class="bg-gradient-to-r from-orange-600 to-purple-600 rounded-2xl text-white p-8 mb-10">
+    <div class="bg-gradient-to-r from-red-600 to-green-600 rounded-2xl text-white p-8 mb-10">
       <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Featured</span>
       <h2 class="text-3xl font-bold mt-4 mb-3">WHERE IS HE THAT IS BORN KING OF THE JEWS?</h2>
       <p class="font-semibold italic mb-4">“Now when Jesus was born in Bethlehem of Judaea in the days of Herod the king, behold, there came wise men from the east to Jerusalem, Saying, Where is he that is born King of the Jews? for we have seen his star in the east, and are come to worship him.” — Matthew 2:1-2 (KJV)</p>
       <h3 class="font-bold mt-4 mb-1">Devotional</h3>
-      <p class="text-orange-100 leading-relaxed mb-4">The Magi did not have all the answers, but they had enough light to begin the journey. Seeking is itself an act of wisdom and faith. They left comfort, crossed borders, and asked hard questions. December invites the same posture: we do not need to see the whole path—only the next step of light.</p>
+      <p class="text-red-100 leading-relaxed mb-4">The Magi did not have all the answers, but they had enough light to begin the journey. Seeking is itself an act of wisdom and faith. They left comfort, crossed borders, and asked hard questions. December invites the same posture: we do not need to see the whole path—only the next step of light.</p>
       <h3 class="font-bold mt-4 mb-1">Quote</h3>
-      <p class="text-orange-100 italic mb-4">“Wise men still seek Him.” — Traditional Christmas saying</p>
+      <p class="text-red-100 italic mb-4">“Wise men still seek Him.” — Traditional Christmas saying</p>
       <h3 class="font-bold mt-4 mb-1">Christmas Song Verse</h3>
-      <p class="text-orange-100 italic mb-4">“We three kings of Orient are;<br>Bearing gifts we traverse afar,<br>Field and fountain, moor and mountain,<br>Following yonder star.”<br>— We Three Kings</p>
+      <p class="text-red-100 italic mb-4">“We three kings of Orient are;<br>Bearing gifts we traverse afar,<br>Field and fountain, moor and mountain,<br>Following yonder star.”<br>— We Three Kings</p>
       <h3 class="font-bold mt-4 mb-1">Today’s Thought</h3>
-      <p class="text-orange-100 leading-relaxed">Begin a simple “seeking journal.” Write one honest question you have for God this month that will bring more peace and joy to this month ...to this year?</p>
+      <p class="text-red-100 leading-relaxed">Begin a simple “seeking journal.” Write one honest question you have for God this month that will bring more peace and joy to this month ...to this year?</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -78,7 +79,7 @@
           <div class="text-xs text-gray-500 mb-2">Nov 24, 2026 • 5 min read</div>
           <h3 class="font-bold text-xl mb-2">Finding Peace in Chaos</h3>
           <p class="text-gray-600 dark:text-gray-300 mb-4">When life feels overwhelming, remember that peace is the presence of God in the midst of it...</p>
-          <button class="text-orange-600 font-semibold">Read More →</button>
+          <button class="text-red-600 font-semibold">Read More →</button>
         </div>
       </article>
       <article data-searchable class="bg-white dark:bg-stone-800 rounded-xl shadow overflow-hidden">
@@ -87,7 +88,7 @@
           <div class="text-xs text-gray-500 mb-2">Nov 23, 2026 • 4 min read</div>
           <h3 class="font-bold text-xl mb-2">Strength in Community</h3>
           <p class="text-gray-600 dark:text-gray-300 mb-4">We are not meant to walk this journey alone. Discover how community lifts you higher...</p>
-          <button class="text-orange-600 font-semibold">Read More →</button>
+          <button class="text-red-600 font-semibold">Read More →</button>
         </div>
       </article>
       <article data-searchable class="bg-white dark:bg-stone-800 rounded-xl shadow overflow-hidden">
@@ -96,7 +97,7 @@
           <div class="text-xs text-gray-500 mb-2">Nov 22, 2026 • 3 min read</div>
           <h3 class="font-bold text-xl mb-2">Evening Reflection: Gratitude</h3>
           <p class="text-gray-600 dark:text-gray-300 mb-4">End your day by counting your blessings. Gratitude transforms our perspective...</p>
-          <button class="text-orange-600 font-semibold">Read More →</button>
+          <button class="text-red-600 font-semibold">Read More →</button>
         </div>
       </article>
     </div>

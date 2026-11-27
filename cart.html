@@ -6,32 +6,33 @@
   <title>Faith on Fire 🕊 - Cart</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="winter.css">
   <script src="script.js" defer></script>
   <script>tailwind.config = { darkMode: 'class' }</script>
 </head>
-<body class="bg-stone-50 dark:bg-stone-950 font-sans text-gray-900 dark:text-gray-100">
+<body class="bg-sky-50 dark:bg-stone-950 font-sans text-gray-900 dark:text-gray-100">
   <header class="bg-white dark:bg-stone-800 shadow-md sticky top-0 z-50">
     <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <a href="spirit.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600">Spirit of Truth</a>
-        <a href="index.html" class="text-2xl font-bold text-orange-600 dark:text-orange-400 flex items-center gap-2"><span class="text-3xl">🕊</span> Faith on Fire</a>
+      <a href="spirit.html" class="text-stone-600 dark:text-stone-300 hover:text-red-600">Spirit of Truth</a>
+        <a href="index.html" class="text-2xl font-bold text-red-600 dark:text-red-400 flex items-center gap-2"><span class="text-3xl">🕊</span> Faith on Fire</a>
       <div class="hidden md:flex space-x-6 items-center">
-        <a href="spirit.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600">Spirit of Truth</a>
+        <a href="spirit.html" class="text-stone-600 dark:text-stone-300 hover:text-red-600">Spirit of Truth</a>
         <a href="index.html" class="text-gray-600 dark:text-gray-300">Home</a>
         <a href="products.html" class="text-gray-600 dark:text-gray-300">Products</a>
         <a href="blog.html" class="text-gray-600 dark:text-gray-300">Devotionals</a>
         <a href="profile.html" class="text-gray-600 dark:text-gray-300">Profile</a>
-        <a href="cart.html" class="text-orange-600 dark:text-orange-400 font-semibold border-b-2 border-orange-600 pb-1">Cart</a>
+        <a href="cart.html" class="text-red-600 dark:text-red-400 font-semibold border-b-2 border-red-600 pb-1">Cart</a>
       </div>
       <div class="flex items-center gap-3">
         <button class="dark-toggle p-2 rounded-lg"><i class="fas fa-moon dark-icon"></i></button>
         <a href="cart.html" class="relative"><i class="fas fa-shopping-cart text-xl"></i><span class="cart-count absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" style="display:none;">0</span></a>
-        <button onclick="openAuthModal('login')" class="login-btn bg-orange-600 text-white px-4 py-2 rounded-lg text-sm">Login</button>
+        <button onclick="openAuthModal('login')" class="login-btn bg-red-600 text-white px-4 py-2 rounded-lg text-sm">Login</button>
         <div class="user-menu hidden"><span class="user-name"></span> <button onclick="logout()" class="ml-2 text-sm">Logout</button></div>
         <button id="mobile-menu-btn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
       </div>
     </nav>
     <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-stone-800 border-t px-4 py-3 space-y-3">
-      <a href="spirit.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600">Spirit of Truth</a>
+      <a href="spirit.html" class="text-stone-600 dark:text-stone-300 hover:text-red-600">Spirit of Truth</a>
         <a href="index.html" class="block">Home</a><a href="products.html" class="block">Products</a><a href="blog.html" class="block">Devotionals</a><a href="profile.html" class="block">Profile</a><a href="cart.html" class="block font-semibold">Cart</a>
     </div>
   </header>
@@ -43,9 +44,9 @@
         <input id="auth-name" placeholder="Name" class="w-full mb-3 px-4 py-2 border rounded-lg dark:bg-stone-700">
         <input id="auth-email" type="email" placeholder="Email" required class="w-full mb-3 px-4 py-2 border rounded-lg dark:bg-stone-700">
         <input id="auth-password" type="password" placeholder="Password" required class="w-full mb-4 px-4 py-2 border rounded-lg dark:bg-stone-700">
-        <button id="auth-submit" type="submit" class="w-full bg-orange-600 text-white py-2 rounded-lg">Log In</button>
+        <button id="auth-submit" type="submit" class="w-full bg-red-600 text-white py-2 rounded-lg">Log In</button>
       </form>
-      <button id="auth-switch" class="mt-4 text-orange-600 text-sm">Sign up</button>
+      <button id="auth-switch" class="mt-4 text-red-600 text-sm">Sign up</button>
       <button onclick="closeAuthModal()" class="mt-2 text-sm">Cancel</button>
     </div>
   </div>
@@ -53,14 +54,14 @@
   <main class="container mx-auto px-4 py-8 max-w-3xl">
     <h1 class="text-3xl font-bold mb-6">Your Cart</h1>
     <div id="cart-items" class="space-y-4">
-      <p class="text-gray-500">Your cart is empty. <a href="products.html" class="text-orange-600">Shop now</a></p>
+      <p class="text-gray-500">Your cart is empty. <a href="products.html" class="text-red-600">Shop now</a></p>
     </div>
     <div id="cart-summary" class="hidden mt-8 bg-white dark:bg-stone-800 rounded-xl shadow p-6">
       <div class="flex justify-between text-xl font-bold mb-4">
         <span>Total:</span>
         <span id="cart-total">$0.00</span>
       </div>
-      <button onclick="showToast('Checkout coming soon! (Demo)')" class="w-full bg-orange-600 text-white py-3 rounded-lg font-semibold hover:bg-orange-700">Proceed to Checkout</button>
+      <button onclick="showToast('Checkout coming soon! (Demo)')" class="w-full bg-red-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700">Proceed to Checkout</button>
     </div>
   </main>
 
@@ -70,7 +71,7 @@
       const container = document.getElementById('cart-items');
       const summary = document.getElementById('cart-summary');
       if (cart.length === 0) {
-        container.innerHTML = '<p class="text-gray-500">Your cart is empty. <a href="products.html" class="text-orange-600">Shop now</a></p>';
+        container.innerHTML = '<p class="text-gray-500">Your cart is empty. <a href="products.html" class="text-red-600">Shop now</a></p>';
         summary.classList.add('hidden');
         return;
       }
